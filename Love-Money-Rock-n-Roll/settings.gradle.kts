@@ -1,0 +1,1 @@
+rootProject.name = "com.handbook.lmr.love-money-rock-n-roll"
