@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Character(
     val id: Int,
-    val firstNam: String,
+    val firstName: String,
     val lastName: String,
     val age: Int = CHARACTER_AGE,
     val description: String,

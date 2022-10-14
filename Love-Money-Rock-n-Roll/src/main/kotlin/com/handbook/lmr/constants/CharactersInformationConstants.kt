@@ -1,8 +1,8 @@
 package com.handbook.lmr.constants
 
-import com.handbook.lmr.constants.RoutesConstant.BASE_URL
+import com.handbook.lmr.constants.RoutesConstants.BASE_URL
 
-object CharactersInformationConstant {
+object CharactersInformationConstants {
 
     const val idNikolai = 0
     const val firstNameNikolai = "Nikolai"

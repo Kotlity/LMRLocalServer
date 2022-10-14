@@ -1,49 +1,53 @@
 package com.handbook.lmr.utils
 
-import com.handbook.lmr.constants.CharactersInformationConstant.ageCatherine
-import com.handbook.lmr.constants.CharactersInformationConstant.ageEllie
-import com.handbook.lmr.constants.CharactersInformationConstant.ageHimitsu
-import com.handbook.lmr.constants.CharactersInformationConstant.ageKagome
-import com.handbook.lmr.constants.CharactersInformationConstant.ageKyosuke
-import com.handbook.lmr.constants.CharactersInformationConstant.ageMichael
-import com.handbook.lmr.constants.CharactersInformationConstant.ageNikolai
-import com.handbook.lmr.constants.CharactersInformationConstant.descriptionCatherine
-import com.handbook.lmr.constants.CharactersInformationConstant.descriptionEllie
-import com.handbook.lmr.constants.CharactersInformationConstant.descriptionHimitsu
-import com.handbook.lmr.constants.CharactersInformationConstant.descriptionKagome
-import com.handbook.lmr.constants.CharactersInformationConstant.descriptionKyosuke
-import com.handbook.lmr.constants.CharactersInformationConstant.descriptionMichael
-import com.handbook.lmr.constants.CharactersInformationConstant.descriptionNikolai
-import com.handbook.lmr.constants.CharactersInformationConstant.firstNameCatherine
-import com.handbook.lmr.constants.CharactersInformationConstant.firstNameEllie
-import com.handbook.lmr.constants.CharactersInformationConstant.firstNameHimitsu
-import com.handbook.lmr.constants.CharactersInformationConstant.firstNameKagome
-import com.handbook.lmr.constants.CharactersInformationConstant.firstNameKyosuke
-import com.handbook.lmr.constants.CharactersInformationConstant.firstNameMichael
-import com.handbook.lmr.constants.CharactersInformationConstant.firstNameNikolai
-import com.handbook.lmr.constants.CharactersInformationConstant.idCatherine
-import com.handbook.lmr.constants.CharactersInformationConstant.idEllie
-import com.handbook.lmr.constants.CharactersInformationConstant.idHimitsu
-import com.handbook.lmr.constants.CharactersInformationConstant.idKagome
-import com.handbook.lmr.constants.CharactersInformationConstant.idKyosuke
-import com.handbook.lmr.constants.CharactersInformationConstant.idMichael
-import com.handbook.lmr.constants.CharactersInformationConstant.idNikolai
-import com.handbook.lmr.constants.CharactersInformationConstant.imageUrlCatherine
-import com.handbook.lmr.constants.CharactersInformationConstant.imageUrlEllie
-import com.handbook.lmr.constants.CharactersInformationConstant.imageUrlHimitsu
-import com.handbook.lmr.constants.CharactersInformationConstant.imageUrlKagome
-import com.handbook.lmr.constants.CharactersInformationConstant.imageUrlKyosuke
-import com.handbook.lmr.constants.CharactersInformationConstant.imageUrlMichael
-import com.handbook.lmr.constants.CharactersInformationConstant.imageUrlNikolai
-import com.handbook.lmr.constants.CharactersInformationConstant.lastNameCatherine
-import com.handbook.lmr.constants.CharactersInformationConstant.lastNameEllie
-import com.handbook.lmr.constants.CharactersInformationConstant.lastNameHimitsu
-import com.handbook.lmr.constants.CharactersInformationConstant.lastNameKagome
-import com.handbook.lmr.constants.CharactersInformationConstant.lastNameKyosuke
-import com.handbook.lmr.constants.CharactersInformationConstant.lastNameMichael
-import com.handbook.lmr.constants.CharactersInformationConstant.lastNameNikolai
+import com.handbook.lmr.constants.CharactersInformationConstants.ageCatherine
+import com.handbook.lmr.constants.CharactersInformationConstants.ageEllie
+import com.handbook.lmr.constants.CharactersInformationConstants.ageHimitsu
+import com.handbook.lmr.constants.CharactersInformationConstants.ageKagome
+import com.handbook.lmr.constants.CharactersInformationConstants.ageKyosuke
+import com.handbook.lmr.constants.CharactersInformationConstants.ageMichael
+import com.handbook.lmr.constants.CharactersInformationConstants.ageNikolai
+import com.handbook.lmr.constants.CharactersInformationConstants.descriptionCatherine
+import com.handbook.lmr.constants.CharactersInformationConstants.descriptionEllie
+import com.handbook.lmr.constants.CharactersInformationConstants.descriptionHimitsu
+import com.handbook.lmr.constants.CharactersInformationConstants.descriptionKagome
+import com.handbook.lmr.constants.CharactersInformationConstants.descriptionKyosuke
+import com.handbook.lmr.constants.CharactersInformationConstants.descriptionMichael
+import com.handbook.lmr.constants.CharactersInformationConstants.descriptionNikolai
+import com.handbook.lmr.constants.CharactersInformationConstants.firstNameCatherine
+import com.handbook.lmr.constants.CharactersInformationConstants.firstNameEllie
+import com.handbook.lmr.constants.CharactersInformationConstants.firstNameHimitsu
+import com.handbook.lmr.constants.CharactersInformationConstants.firstNameKagome
+import com.handbook.lmr.constants.CharactersInformationConstants.firstNameKyosuke
+import com.handbook.lmr.constants.CharactersInformationConstants.firstNameMichael
+import com.handbook.lmr.constants.CharactersInformationConstants.firstNameNikolai
+import com.handbook.lmr.constants.CharactersInformationConstants.idCatherine
+import com.handbook.lmr.constants.CharactersInformationConstants.idEllie
+import com.handbook.lmr.constants.CharactersInformationConstants.idHimitsu
+import com.handbook.lmr.constants.CharactersInformationConstants.idKagome
+import com.handbook.lmr.constants.CharactersInformationConstants.idKyosuke
+import com.handbook.lmr.constants.CharactersInformationConstants.idMichael
+import com.handbook.lmr.constants.CharactersInformationConstants.idNikolai
+import com.handbook.lmr.constants.CharactersInformationConstants.imageUrlCatherine
+import com.handbook.lmr.constants.CharactersInformationConstants.imageUrlEllie
+import com.handbook.lmr.constants.CharactersInformationConstants.imageUrlHimitsu
+import com.handbook.lmr.constants.CharactersInformationConstants.imageUrlKagome
+import com.handbook.lmr.constants.CharactersInformationConstants.imageUrlKyosuke
+import com.handbook.lmr.constants.CharactersInformationConstants.imageUrlMichael
+import com.handbook.lmr.constants.CharactersInformationConstants.imageUrlNikolai
+import com.handbook.lmr.constants.CharactersInformationConstants.lastNameCatherine
+import com.handbook.lmr.constants.CharactersInformationConstants.lastNameEllie
+import com.handbook.lmr.constants.CharactersInformationConstants.lastNameHimitsu
+import com.handbook.lmr.constants.CharactersInformationConstants.lastNameKagome
+import com.handbook.lmr.constants.CharactersInformationConstants.lastNameKyosuke
+import com.handbook.lmr.constants.CharactersInformationConstants.lastNameMichael
+import com.handbook.lmr.constants.CharactersInformationConstants.lastNameNikolai
 import com.handbook.lmr.database.table.CharactersTable
 import com.handbook.lmr.models.Character
+import io.ktor.http.*
+import io.ktor.server.application.*
+import io.ktor.server.response.*
+import io.ktor.util.pipeline.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.jetbrains.exposed.sql.ResultRow
@@ -111,6 +115,12 @@ object DatabaseUtils {
     )
 
     suspend fun <T> databaseQuery(query: () -> T): T = withContext(Dispatchers.IO) { transaction { query() } }
+
+    fun isDatabaseQueryResultEmpty(content: List<Character?>): Boolean = content.isEmpty()
+
+    suspend fun PipelineContext<Unit, ApplicationCall>.errorResponse(errorText: String, httpStatus: HttpStatusCode) {
+        call.respondText(text = errorText, status = httpStatus)
+    }
 
     fun queryResultRowToCharacter(queryResultRow: ResultRow?): Character? {
         return if (queryResultRow == null) null else Character(

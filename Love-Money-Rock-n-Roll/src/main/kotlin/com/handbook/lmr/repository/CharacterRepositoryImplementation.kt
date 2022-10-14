@@ -1,10 +1,12 @@
 package com.handbook.lmr.repository
 
+import com.handbook.lmr.constants.ErrorConstants.DATA_ALREADY_LOADED
 import com.handbook.lmr.database.table.CharactersTable
 import com.handbook.lmr.models.Character
 import com.handbook.lmr.utils.DatabaseUtils.addAllCharacters
 import com.handbook.lmr.utils.DatabaseUtils.databaseQuery
 import com.handbook.lmr.utils.DatabaseUtils.queryResultRowToCharacter
+import org.jetbrains.exposed.exceptions.ExposedSQLException
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction
 
@@ -12,20 +14,24 @@ class CharacterRepositoryImplementation: CharacterRepository {
 
     override fun insertAllCharacters() {
         transaction {
-            CharactersTable.batchInsert(addAllCharacters()) { character ->
-                this[CharactersTable.id] = character.id
-                this[CharactersTable.firstname] = character.firstName
-                this[CharactersTable.lastname] = character.lastName
-                this[CharactersTable.age] = character.age
-                this[CharactersTable.description] = character.description
-                this[CharactersTable.imageurl] = character.imageUrl
-                this[CharactersTable.isfavorite] = character.isFavorite
+            try {
+                CharactersTable.batchInsert(addAllCharacters()) { character ->
+                    this[CharactersTable.id] = character.id
+                    this[CharactersTable.firstname] = character.firstName
+                    this[CharactersTable.lastname] = character.lastName
+                    this[CharactersTable.age] = character.age
+                    this[CharactersTable.description] = character.description
+                    this[CharactersTable.imageurl] = character.imageUrl
+                    this[CharactersTable.isfavorite] = character.isFavorite
+                }
+            } catch (e: ExposedSQLException) {
+                println(DATA_ALREADY_LOADED)
             }
         }
     }
 
     override suspend fun getAllCharacters(): List<Character?> = databaseQuery {
-        CharactersTable.selectAll().map { queryResultRow -> queryResultRowToCharacter(queryResultRow) }
+        CharactersTable.selectAll().sortedBy { queryResultRow -> queryResultRow[CharactersTable.id] }.map { queryResultRow -> queryResultRowToCharacter(queryResultRow) }
     }
 
     override suspend fun getCharacterById(characterId: Int): Character? = databaseQuery {
