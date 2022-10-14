@@ -9,5 +9,6 @@ object ErrorConstants {
     const val IS_NOT_SPECIFIED_NAME = "Path name is not specified"
     const val DOES_NOT_MATCH_NAME = "Characters name does not match the search query"
     const val WRONG_CHARACTER_ID_REQUEST = "Character id parameter does not match character received id"
+    const val FAVORITE_CHARACTERS_LIST_IS_EMPTY = "No favorite characters in the database"
 
 }
