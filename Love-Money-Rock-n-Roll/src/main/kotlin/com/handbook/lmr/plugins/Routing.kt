@@ -6,6 +6,7 @@ import com.handbook.lmr.repository.CharacterRepositoryImplementation
 import com.handbook.lmr.routes.getAllCharacters
 import com.handbook.lmr.routes.getCharacterById
 import com.handbook.lmr.routes.searchCharactersByFirstLastName
+import com.handbook.lmr.routes.updateCharactersWithIsFavorite
 import io.ktor.server.routing.*
 import io.ktor.http.*
 import io.ktor.server.http.content.*
@@ -21,6 +22,7 @@ fun Application.configureRouting() {
             getAllCharacters(characterRepository)
             getCharacterById(characterRepository)
             searchCharactersByFirstLastName(characterRepository)
+            updateCharactersWithIsFavorite(characterRepository)
         }
 
         static {

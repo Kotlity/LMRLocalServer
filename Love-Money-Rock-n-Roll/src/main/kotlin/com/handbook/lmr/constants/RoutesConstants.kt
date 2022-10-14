@@ -10,4 +10,6 @@ object RoutesConstants {
     const val SEARCH_CHARACTERS_ROUTE = "/search"
     const val SEARCH_CHARACTERS_QUERY = "/{name?}"
     const val SEARCH_CHARACTERS_PARAMETER = "name"
+    const val UPDATE_CHARACTER_ROUTE = "/update"
+    const val UPDATE_CHARACTER_QUERY = "/{id?}"
 }
