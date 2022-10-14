@@ -7,4 +7,7 @@ object RoutesConstants {
     const val GET_CHARACTER_ROUTE = "/get"
     const val GET_CHARACTER_BY_ID_QUERY = "/{id?}"
     const val CHARACTER_ID_PARAMETER = "id"
+    const val SEARCH_CHARACTERS_ROUTE = "/search"
+    const val SEARCH_CHARACTERS_QUERY = "/{name?}"
+    const val SEARCH_CHARACTERS_PARAMETER = "name"
 }
