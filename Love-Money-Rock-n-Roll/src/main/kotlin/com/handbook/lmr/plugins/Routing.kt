@@ -10,5 +10,11 @@ import io.ktor.server.request.*
 fun Application.configureRouting() {
     
     routing {
+
+
+        static {
+            resources("static")
+        }
     }
+
 }
