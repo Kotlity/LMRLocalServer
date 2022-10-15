@@ -9,8 +9,10 @@ import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import org.koin.ktor.ext.inject
 
-fun Route.getAllFavoriteCharactersRoute(characterRepository: CharacterRepository) {
+fun Route.getAllFavoriteCharactersRoute() {
+    val characterRepository: CharacterRepository by inject()
     route(ALL_FAVORITE_CHARACTERS_ROUTE) {
         get {
             val allFavoriteCharacters = characterRepository.getAllFavoriteCharacters()

@@ -15,12 +15,11 @@ fun Application.configureRouting() {
     
     routing {
         route(CHARACTERS_ROUTE) {
-            val characterRepository: CharacterRepository = CharacterRepositoryImplementation()
-            getAllCharacters(characterRepository)
-            getCharacterById(characterRepository)
-            searchCharactersByFirstLastName(characterRepository)
-            updateCharactersWithIsFavorite(characterRepository)
-            getAllFavoriteCharactersRoute(characterRepository)
+            getAllCharacters()
+            getCharacterById()
+            searchCharactersByFirstLastName()
+            updateCharactersWithIsFavorite()
+            getAllFavoriteCharactersRoute()
         }
 
         static {

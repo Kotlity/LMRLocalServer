@@ -9,8 +9,9 @@ import com.handbook.lmr.utils.DatabaseUtils.queryResultRowToCharacter
 import org.jetbrains.exposed.exceptions.ExposedSQLException
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction
+import org.koin.core.component.KoinComponent
 
-class CharacterRepositoryImplementation: CharacterRepository {
+class CharacterRepositoryImplementation: CharacterRepository, KoinComponent {
 
     override fun insertAllCharacters() {
         transaction {

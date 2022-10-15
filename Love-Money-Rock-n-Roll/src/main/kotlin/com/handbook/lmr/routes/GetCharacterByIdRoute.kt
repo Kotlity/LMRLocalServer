@@ -11,8 +11,10 @@ import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import org.koin.ktor.ext.inject
 
-fun Route.getCharacterById(characterRepository: CharacterRepository) {
+fun Route.getCharacterById() {
+    val characterRepository: CharacterRepository by inject()
     route(GET_CHARACTER_ROUTE) {
         get(GET_CHARACTER_BY_ID_QUERY) {
             val characterId = call.parameters[CHARACTER_ID_PARAMETER]?.toInt() ?: return@get errorResponse(IS_NOT_SPECIFIED_ID, HttpStatusCode.BadRequest)

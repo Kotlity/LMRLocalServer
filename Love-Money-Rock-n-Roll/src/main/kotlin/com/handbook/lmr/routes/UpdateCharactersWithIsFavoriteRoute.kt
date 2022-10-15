@@ -13,8 +13,10 @@ import io.ktor.server.application.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import org.koin.ktor.ext.inject
 
-fun Route.updateCharactersWithIsFavorite(characterRepository: CharacterRepository) {
+fun Route.updateCharactersWithIsFavorite() {
+    val characterRepository: CharacterRepository by inject()
     route(UPDATE_CHARACTER_ROUTE) {
         put(UPDATE_CHARACTER_QUERY) {
             val characterId = call.parameters[CHARACTER_ID_PARAMETER]?.toInt() ?: return@put errorResponse(IS_NOT_SPECIFIED_ID, HttpStatusCode.BadRequest)

@@ -12,8 +12,10 @@ import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import org.koin.ktor.ext.inject
 
-fun Route.searchCharactersByFirstLastName(characterRepository: CharacterRepository) {
+fun Route.searchCharactersByFirstLastName() {
+    val characterRepository: CharacterRepository by inject()
     route(SEARCH_CHARACTERS_ROUTE) {
         get(SEARCH_CHARACTERS_QUERY) {
             val searchQuery = call.parameters[SEARCH_CHARACTERS_PARAMETER] ?: return@get errorResponse(IS_NOT_SPECIFIED_NAME, HttpStatusCode.BadRequest)
